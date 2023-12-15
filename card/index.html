@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Design your card</title>
+    <link rel="stylesheet" href="../assets/css/cards.css">
+</head>
+<body id="card">
+    <p>Dear <span id="card-r"></span></p>
+    <p id="card-g">Greeting goes here</p>
+    <p>Best wishes, <span id="card-s"></span></p>
+<script>
+    // extract encoded parameters from the URL hash (not including the leading # character)
+    const encodedParams = window.location.hash.substring(1);
+    // reverse the base64 encoding and parse
+    const params = new URLSearchParams(atob(encodedParams));
+    // insert the values into the HTML
+    for(let field of ["r", "g", "s"]) {
+        document.getElementById(`card-${field}`).textContent = params.get(field);
+    }
+    // fix up the background colour
+    document.getElementById("card").style.backgroundColor = params.get("b");
+</script>
+</body>
+</html>

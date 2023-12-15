@@ -1,0 +1,97 @@
+body {
+    background: darkblue;
+    color: #fff;
+}
+
+.main {
+    position: relative;
+}
+
+.snowman-head, .snowman-body {
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.snowman-head {
+    top: 250px;
+    width: 100px;
+    height: 100px;
+}
+
+.snowman-eyes.left, .snowman-eyes.right {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 40px;
+    background: #000;
+}
+
+.snowman-eyes.left {
+    left: 25px;
+}
+
+.snowman-eyes.right {
+    right: 25px;
+}
+
+.snowman-mouth {
+    position: absolute;
+    border-bottom-left-radius: 100%;
+    border-left: 5px dotted black;
+    border-bottom: 5px dotted black;
+    border-top: none;
+    border-right: none;
+    bottom: 20px;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.snowman-body {
+    top: 325px;
+    width: 150px;
+    height: 150px;
+}
+
+.snowman-buttons {
+    position: absolute;
+    width: 10px;
+    height: 70px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.snowman-buttons span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+}
+
+.snowman-hat {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-image: url("top-hat-svgrepo-com.svg");
+}
+
+.snowman-hat.santa {
+    width: 240px;
+    height: 126px;
+    top: 210px;
+    background-image: url("santa-hat.svg");
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Design your card</title>
+  <link rel="stylesheet" href="assets/css/cards.css">
+</head>
+<body>
+<h1>Design your card</h1>
+<main id="design">
+  <div id="card" class="col">
+    <p>Dear <span id="card-r" data-placeholder="{Recipient}">{Recipient}</span></p>
+    <p id="card-g" data-placeholder="{Greeting goes here}">{Greeting goes here}</p>
+    <p>Best wishes, <span id="card-s" data-placeholder="{Sender}">{Sender}</span></p>
+  </div>
+  <form id="cardForm" class="col">
+    <!--
+    These form fields will be encoded into the final card URL, so we keep the names as
+    short as possible to stop the URL getting too long
+    -->
+    <input name="r" type="text" required placeholder="Card recipient">
+    <textarea name="g" required placeholder="Enter your greeting here"></textarea>
+    <input name="s" type="text" required placeholder="Your name">
+    <input name="b" type="color" value="#ffffff">
+
+    <!--
+    These buttons and the cardUrl field *deliberately* do not have name="...", so they will
+    not become part of the serialized FormData.
+    -->
+    <p><button type="submit">Share this card</button> <button type="reset">Start again</button></p>
+    <input id="cardUrl" readonly type="text">
+    <div id="copyStatus">&nbsp;</div>
+  </form>
+</main>
+<script src="assets/js/card-designer.js"></script>
+</body>
+</html>

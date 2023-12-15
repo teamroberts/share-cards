@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p><label><input type="checkbox" id="santa-hat"> santa hat?</label></p>
+  <div class="main">
+    <div class="snowman-body">
+      <div class="snowman-arm left"></div>
+      <div class="snowman-arm right"></div>
+      <div class="snowman-buttons">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="snowman-head">
+      <div class="snowman-eyes left"></div>
+      <div class="snowman-eyes right"></div>
+      <div class="snowman-mouth"></div>
+      <div class="snowman-nose"></div>
+    </div>
+    <div class="snowman-neck">
+    </div>
+    <div class="snowman-hat" id="hat"></div>
+  </div>
+<script>
+  const initialHat = new URL(window.location.href).searchParams.get("hat");
+  if(initialHat) {
+    document.getElementById('hat').classList.add(initialHat);
+  }
+
+  document.getElementById('santa-hat').addEventListener('change', function(e) {
+    const hat = document.getElementById('hat');
+    hat.classList.toggle("santa", e.target.checked);
+  });
+</script>
+</body>
+</html>

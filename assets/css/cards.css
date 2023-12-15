@@ -1,0 +1,22 @@
+#design {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 3em;
+}
+
+.col {
+    flex: 1;
+}
+
+#card {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#cardForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-content: stretch;
+}
