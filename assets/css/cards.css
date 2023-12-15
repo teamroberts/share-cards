@@ -14,6 +14,11 @@
     font-size: 2rem;
 }
 
+#card-g {
+    /* Greeting can be multiple lines, so preserve hard line breaks */
+    white-space: pre-line;
+}
+
 #cardForm {
     display: flex;
     flex-direction: column;
